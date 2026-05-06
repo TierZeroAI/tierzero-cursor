@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "tierzero": {
+      "url": "https://api.tierzero.ai/mcp/"
+    }
+  }
+}

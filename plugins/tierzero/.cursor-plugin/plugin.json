@@ -1,0 +1,24 @@
+{
+  "name": "tierzero",
+  "displayName": "TierZero",
+  "version": "1.0.2",
+  "description": "Production telemetry and incident context for Cursor. Native MCP integration with logs, metrics, traces, CI/CD, and knowledge bases via TierZero.",
+  "author": {
+    "name": "TierZero",
+    "email": "support@tierzero.ai"
+  },
+  "homepage": "https://docs.tierzero.ai/references/mcp-server",
+  "repository": "https://github.com/TierZeroAI/tierzero-cursor",
+  "license": "MIT",
+  "keywords": [
+    "observability",
+    "debugging",
+    "incident-response",
+    "telemetry",
+    "mcp",
+    "datadog",
+    "sentry",
+    "github"
+  ],
+  "logo": "assets/logo.svg"
+}

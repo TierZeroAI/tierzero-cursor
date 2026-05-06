@@ -1,0 +1,22 @@
+---
+description: Reach for TierZero whenever real production behavior would change your answer
+alwaysApply: true
+---
+
+# When to call TierZero
+
+This workspace has the TierZero MCP server (`tierzero`) installed. It exposes tools that read live production telemetry across logs, metrics, traces, CI/CD, and knowledge bases.
+
+Use it without being asked when:
+
+- The user is investigating an incident, alert, or production error.
+- The user is debugging behavior that depends on real traffic, real data, or real timing.
+- A code change touches a hot path and you don't know what calls it or how often.
+- A PR review hinges on whether something is actually broken in prod.
+- The user pastes a service name, error string, or stack trace from a real environment.
+
+Prefer the `tierzero_ask` MCP tool for open-ended questions. Prefer `tierzero_fetch_context` when the user shares a TierZero URL or artifact UUID.
+
+When you call it, pass a specific query: name the service, give a time window, describe the symptom. Vague queries waste turns.
+
+Do not call TierZero for pure unit tests, doc-only edits, or local dev questions where production data is irrelevant. Do not wrap the MCP tools in shell scripts — call them directly through MCP.
