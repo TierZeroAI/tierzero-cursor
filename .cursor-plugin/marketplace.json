@@ -1,6 +1,6 @@
 {
   "name": "tierzero",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "owner": {
     "name": "TierZero",
     "email": "support@tierzero.ai"
@@ -13,7 +13,7 @@
     {
       "name": "tierzero",
       "source": "./tierzero",
-      "description": "Query production telemetry through TierZero's unified API. Adds a native MCP server, slash commands, and proactive telemetry guidance."
+      "description": "Query production telemetry through TierZero's unified API. Adds a native MCP server, an /investigate slash command, and proactive telemetry guidance."
     }
   ]
 }

@@ -1,17 +1,17 @@
 ---
-name: tierzero
+name: investigate
 description: Run a TierZero investigation against your connected production systems (logs, metrics, traces, CI/CD, knowledge bases).
 ---
 
-# /tierzero
+# /investigate
 
 Run a TierZero investigation against connected production systems.
 
-The arguments after `/tierzero` are the user's natural-language query.
+The arguments after `/investigate` are the user's natural-language query.
 
 ## Steps
 
-1. Treat everything the user typed after `/tierzero` as the investigation `query`.
+1. Treat everything the user typed after `/investigate` as the investigation `query`.
 2. If the query is empty, ask the user what they want to investigate, then stop.
 3. Call the `tierzero_ask` tool on the `tierzero` MCP server with that query as the `query` argument.
 4. Wait for the response, then summarize the findings tied to the user's current work.
@@ -26,6 +26,6 @@ The arguments after `/tierzero` are the user's natural-language query.
 
 ## Examples
 
-- `/tierzero what errors hit payment-service in the last hour?`
-- `/tierzero p95 latency for /api/checkout over the last 24h, flag anomalies`
-- `/tierzero did any github actions runs for the api repo fail today?`
+- `/investigate what errors hit payment-service in the last hour?`
+- `/investigate p95 latency for /api/checkout over the last 24h, flag anomalies`
+- `/investigate did any github actions runs for the api repo fail today?`

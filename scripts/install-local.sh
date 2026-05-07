@@ -74,5 +74,5 @@ Next steps (one time):
 Verify after launch:
   - Settings > Plugins lists "TierZero" as enabled
   - Settings > MCP shows the "tierzero" server as healthy
-  - Typing "/" in chat shows /tierzero and /tierzero-fetch
+  - Typing "/" in chat shows /investigate
 EOF

@@ -12,7 +12,7 @@ This is a multi-plugin marketplace repo with one published plugin:
 
 | Plugin | What it does |
 |--------|--------------|
-| [`tierzero`](./plugins/tierzero) | Registers the TierZero MCP server, ships `/tierzero` and `/tierzero-fetch` commands, plus skills and a rule that tell the agent when to use them. |
+| [`tierzero`](./plugins/tierzero) | Registers the TierZero MCP server, ships the `/investigate` slash command, plus `tierzero-investigate` and `tierzero-fetch` skills and an always-on rule that tell the agent when to use them. |
 
 See [`plugins/tierzero/README.md`](./plugins/tierzero/README.md) for details and usage.
 
@@ -34,7 +34,7 @@ One-time setup in Cursor:
 2. Fully quit Cursor (Cmd+Q) and relaunch. *Reload Window is unreliable* — quit + relaunch.
 3. Settings → MCP → tierzero → click **Authorize**, log in to TierZero in the browser, consent.
 
-Verify it loaded: Settings → Plugins shows **TierZero**, Settings → MCP shows `tierzero` healthy (green), typing `/` in chat shows `/tierzero` and `/tierzero-fetch`.
+Verify it loaded: Settings → Plugins shows **TierZero**, Settings → MCP shows `tierzero` healthy (green), typing `/` in chat shows `/investigate`.
 
 ## Layout
 

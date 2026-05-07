@@ -5,8 +5,8 @@ Native production telemetry inside Cursor. The plugin registers TierZero as an M
 ## What you get
 
 - **MCP server** — `tierzero` is registered automatically. The agent can call every tool the TierZero MCP server exposes (`tierzero_ask`, `tierzero_fetch_context`, plus any others the server adds in the future) without shelling out.
-- **Slash commands** — `/tierzero <query>` to run an investigation, `/tierzero-fetch <url-or-uuid>` to load a saved chat / investigation / artifact.
-- **Skills** — instruct the agent on when to use the `tierzero_ask` and `tierzero_fetch_context` tools.
+- **Slash command** — `/investigate <query>` to kick off a TierZero investigation.
+- **Skills** — `tierzero-investigate` (the entry point for any production problem — alerts, errors, latency, deploy regressions) and `tierzero-fetch` (load a saved TierZero chat, investigation, or artifact). The agent picks them automatically based on context.
 - **Rule** — `alwaysApply` rule that nudges the agent to reach for TierZero whenever real production behavior would change its answer.
 
 ## Requirements
@@ -22,19 +22,21 @@ The plugin uses OAuth — no tokens, no env vars. On first use Cursor opens a br
 ### Run an investigation
 
 ```
-/tierzero what errors hit payment-service in the last hour?
+/investigate what errors hit payment-service in the last hour?
 ```
 
 The agent calls `tierzero_ask` and summarizes the result.
 
 ### Load saved context
 
+Just paste a TierZero URL or artifact UUID into the chat:
+
 ```
-/tierzero-fetch https://app.tierzero.ai/investigations/SW52ZXN0...
-/tierzero-fetch bf904904-afdc-4cf2-94d8-76a4a8bb4f75
+https://app.tierzero.ai/investigations/SW52ZXN0...
+bf904904-afdc-4cf2-94d8-76a4a8bb4f75
 ```
 
-The agent loads the chat / investigation / artifact and folds it into the current task.
+The `tierzero-fetch` skill triggers automatically — the agent loads the chat / investigation / artifact and folds it into the current task.
 
 ### Hands-off
 
