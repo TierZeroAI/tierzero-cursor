@@ -1,7 +1,7 @@
 {
   "name": "tierzero",
   "displayName": "TierZero",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Production telemetry and incident context for Cursor. Native MCP integration with logs, metrics, traces, CI/CD, and knowledge bases via TierZero.",
   "author": {
     "name": "TierZero",
