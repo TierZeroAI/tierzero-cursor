@@ -1,6 +1,6 @@
 # TierZero for Cursor
 
-Native production telemetry inside Cursor. The plugin registers TierZero as an MCP server so the agent can read your logs, metrics, traces, CI/CD runs, and knowledge bases through a single API.
+Agentic production engineering inside Cursor — for SWE, SRE, and DevOps work. The plugin registers TierZero as an MCP server so the agent can resolve and investigate issues against your existing observability stack, CI/CD systems, and self-improving knowledge bases.
 
 ## What you get
 

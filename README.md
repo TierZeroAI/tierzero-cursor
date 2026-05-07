@@ -1,6 +1,6 @@
 # TierZero Cursor Plugin
 
-Cursor Marketplace plugin for [TierZero](https://tierzero.ai) — production telemetry and incident context for AI assistants.
+Cursor Marketplace plugin for [TierZero](https://tierzero.ai) — agentic production engineering for SWE, SRE, and DevOps. Resolve and investigate issues against your existing observability, CI/CD, and self-improving knowledge bases.
 
 ## Install
 

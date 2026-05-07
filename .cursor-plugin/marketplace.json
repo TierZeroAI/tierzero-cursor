@@ -1,19 +1,19 @@
 {
   "name": "tierzero",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "owner": {
     "name": "TierZero",
     "email": "support@tierzero.ai"
   },
   "metadata": {
-    "description": "Production telemetry and incident context for AI assistants. Connects Cursor to logs, metrics, traces, CI/CD, and knowledge bases.",
+    "description": "Agentic production engineering for SWE, SRE and DevOps. Resolve and investigate issues against existing observability, CI/CD, and self-improving knowledge bases.",
     "pluginRoot": "./plugins"
   },
   "plugins": [
     {
       "name": "tierzero",
       "source": "./tierzero",
-      "description": "Query production telemetry through TierZero's unified API. Adds a native MCP server, an /investigate slash command, and proactive telemetry guidance."
+      "description": "Agentic production engineering inside Cursor. Resolve and investigate issues against existing observability, CI/CD, and self-improving knowledge bases via TierZero."
     }
   ]
 }
