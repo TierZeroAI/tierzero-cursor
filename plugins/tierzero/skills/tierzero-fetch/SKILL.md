@@ -1,6 +1,8 @@
 ---
 name: tierzero-fetch
 description: Fetch a TierZero conversation, investigation, or artifact by URL or UUID and fold it into the current task. Use when the user pastes a TierZero link (chat, investigation, or artifact), shares a bare artifact UUID, or asks you to load saved context from a prior TierZero session.
+allowed-tools:
+  - tierzero_fetch_context
 ---
 
 # TierZero: Fetch Context

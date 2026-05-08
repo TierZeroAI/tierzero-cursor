@@ -15,8 +15,18 @@ Use it without being asked when:
 - A PR review hinges on whether something is actually broken in prod.
 - The user pastes a service name, error string, or stack trace from a real environment.
 
-Prefer the `tierzero_ask` MCP tool for open-ended questions. Prefer `tierzero_fetch_context` when the user shares a TierZero URL or artifact UUID.
+## Available MCP tools
 
-When you call it, pass a specific query: name the service, give a time window, describe the symptom. Vague queries waste turns.
+Call these directly by their bare names through the MCP interface — do not construct namespaced paths, do not shell out to `curl`, do not read Cursor's internal cache files (`SERVER_METADATA.json`, etc.) to discover them.
 
-Do not call TierZero for pure unit tests, doc-only edits, or local dev questions where production data is irrelevant. Do not wrap the MCP tools in shell scripts — call them directly through MCP.
+| Tool | Purpose |
+|---|---|
+| `tierzero_ask` | Run an investigation. Pass a single `query` (plain English). Names a service, time window, and symptom. Returns grounded findings with evidence sources and any TierZero investigation URL to drill into. |
+| `tierzero_fetch_context` | Load a TierZero conversation, investigation, or artifact. Pass `url` (chat URL, investigation URL, or bare artifact UUID) and optional `include_sources` (default `false`; set `true` only when the user asks for source-by-source breakdowns). |
+
+When you call `tierzero_ask`, pass a specific query: name the service, give a time window, describe the symptom. Vague queries waste turns.
+
+## When NOT to call TierZero
+
+- Pure unit tests, doc-only edits, or local dev questions where production data is irrelevant.
+- Authentication: TierZero handles OAuth automatically through Cursor. If a tool call returns an auth error, tell the user to open Cursor Settings → MCP → tierzero and click Authorize, then retry. Do not try to set env vars or pass tokens manually.
