@@ -1,9 +1,13 @@
 ---
 name: tierzero-investigate
-description: The entry point for any production or infrastructure problem — deployment failures, errors, latency regressions, traffic anomalies, alerts, or anything misbehaving in live systems. Use when the user wants to understand what's happening in prod, check the status of an investigation, ask about a service's behavior, kick off a root-cause investigation, query TierZero for production context, or debug any change where real production data would inform a better answer. Handles the full investigation lifecycle from discovery through analysis.
+description: The entry point for any production or infrastructure problem — deployment failures, errors, latency regressions, traffic anomalies, alerts, or anything misbehaving in live systems. Use when the user wants to understand what's happening in prod, check the status of an investigation, ask about a service's behavior, kick off a root-cause investigation, query TierZero (also referred to as t0, tz, or tzero) for production context, or debug any change where real production data would inform a better answer. Handles the full investigation lifecycle from discovery through analysis.
 allowed-tools:
   - tierzero_ask
   - tierzero_fetch_context
+triggers:
+  - (tierzero|t0|tz|tzero).?ask
+  - (tierzero|t0|tz|tzero).?investigate
+  - investigate.?prod
 ---
 
 # TierZero: Production Investigation Skill
